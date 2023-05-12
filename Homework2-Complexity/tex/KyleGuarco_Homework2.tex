@@ -44,10 +44,9 @@
 \begin{align*}
 	\sum_{i = 0}^{N - P}\left( \sum_{j = 0}^{P - 1}{1} \right) &= \sum_{i = 0}^{N - P}{P}  &\mbox{Reduce inner loop using `sum of ones' formula}\\
 	\sum_{i = 0}^{N - P}{P} &= P(N - P + 1) &\mbox{Repeated sum of constant $P$}\\
-	&= -P^2 + NP + P &\mbox{A quadratic runtime!}\\
+	&= -P^2 + NP + P &\mbox{$\mathbf{O}(NP)$ ignoring the negative term.}\\
 \end{align*}
-Therefore the runtime of \lstinline[language=Java]{search(String, String)} is $\mathbf{O}(n^2)$. Interestingly, this
-algorithm's runtime is dependant on the size of $P$ (the pattern search size), rather than the input string size $N$.
+Therefore the runtime of \lstinline[language=Java]{search(String, String)} is $\mathbf{O}(nm)$.
 
 \newpage
 \section{Code}
