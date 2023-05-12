@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{xcolor, listings, amsmath, amssymb, tcolorbox}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{code}{
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+\lstset{style=code}
+
+\author{Kyle Guarco}
+\title{CS 463: Homework 2}
+
+\begin{document}
+\maketitle
+\section{Solution}
+\textit{Analyze the runtime of the following:}
+\lstinputlisting[language=Java, firstline=3, lastline=18]{../MainNoComment.java}
+
+\begin{tcolorbox}
+	\centering
+	Recall that a repeated sum of ones equals its bound: $\sum_{i = 1}^{n}(1) = n$
+
+	A repeated sum of some constant $C$: $\sum_{i = 1}^{n}(C) = Cn$
+\end{tcolorbox}
+
+\noindent We write the loops in terms of summations (the 1 indicates a constant runtime):
+\begin{align*}
+	\sum_{i = 0}^{N - P}\left( \sum_{j = 0}^{P - 1}{1} \right) &= \sum_{i = 0}^{N - P}{P}  &\mbox{Reduce inner loop using `sum of ones' formula}\\
+	\sum_{i = 0}^{N - P}{P} &= P(N - P + 1) &\mbox{Repeated sum of constant $P$}\\
+	&= -P^2 + NP + P &\mbox{A quadratic runtime!}\\
+\end{align*}
+Therefore the runtime of \lstinline[language=Java]{search(String, String)} is $\mathbf{O}(n^2)$. Interestingly, this
+algorithm's runtime is dependant on the size of $P$ (the pattern search size), rather than the input string size $N$.
+
+\newpage
+\section{Code}
+\lstinputlisting[language=Java]{../Main.java}
+\end{document}

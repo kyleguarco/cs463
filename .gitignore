@@ -1,0 +1,8 @@
+# Java Binaries
+*.jar
+*.class
+bin/
+
+# Videos
+*.mkv
+

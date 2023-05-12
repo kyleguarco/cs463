@@ -1,0 +1,15 @@
+Lowest bound: (Person A, $1) (Person A, $2) (Person C, $3) (Person D, $4) = 10
+Possible bound for Job 1: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
+Possible bound for Job 1: (Person B, $6) (Person A, $2) (Person C, $3) (Person D, $4) = 15
+Possible bound for Job 1: (Person C, $5) (Person A, $2) (Person B, $6) (Person D, $4) = 17
+Possible bound for Job 1: (Person D, $8) (Person A, $2) (Person C, $3) (Person A, $5) = 18
+Lowest bound for Job 1: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
+Possible bound for Job 2: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
+Possible bound for Job 2: (Person A, $1) (Person C, $7) (Person B, $6) (Person D, $4) = 18
+Possible bound for Job 2: (Person A, $1) (Person D, $6) (Person C, $3) (Person B, $7) = 17
+Lowest bound for Job 2: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
+Possible bound for Job 3: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
+Possible bound for Job 3: (Person A, $1) (Person B, $2) (Person D, $9) (Person C, $8) = 20
+Lowest bound for Job 3: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
+Possible bound for Job 4: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
+Lowest bound for Job 4: (Person A, $1) (Person B, $2) (Person C, $3) (Person D, $4) = 10
